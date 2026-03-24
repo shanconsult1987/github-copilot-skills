@@ -1,13 +1,10 @@
-from flask import Flask, jsonify
+from flask import Flask
 
 app = Flask(__name__)
 
-@app.route("/products")
-def products():
-    return jsonify([
-        {"id":1,"name":"Laptop"},
-        {"id":2,"name":"Phone"}
-    ])
+@app.route("/")
+def home():
+    return "Hello Copilot Agent"
 
 if __name__ == "__main__":
     app.run(port=5000)
